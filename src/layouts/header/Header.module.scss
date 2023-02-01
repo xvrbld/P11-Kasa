@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav {
+        display: flex;
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .home {
+            margin-right: 50px;
+
+            @media screen and (max-width: 480px) {
+                margin-right: 25px;
+            }
+
+            :focus {
+                border-bottom: 1px solid;
+            }
+        }
+    }
+}
