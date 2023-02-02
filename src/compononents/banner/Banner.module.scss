@@ -1,0 +1,20 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+
+    img {
+        border-radius: 25px;
+        max-height: 220px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .caption {
+        position: absolute;
+        top: 37%;
+        color: white;
+        font-size: 48px;
+    }
+}
