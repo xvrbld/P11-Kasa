@@ -1,0 +1,50 @@
+.collapse {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto 0 auto;
+    padding-left: 15px;
+    display: flex;
+    width: calc(75% - 60px);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    svg {
+        height: 15px;
+        position: absolute;
+        right: 0;
+        margin-right: 25px;
+        top: 12px;
+
+        @media screen and (max-width: 480px) {
+            height: 13px;
+            top: 13px;
+        }
+    }
+}
+
+.text {
+    background-color: #F6F6F6;
+    color: var(--primary);
+    border-radius: 0 0 5px 5px;
+    margin: auto;
+    padding: 10px;
+    padding-top: 20px;
+    width: calc(75% - 80px);
+    font-size: 20px;
+
+    @media screen and (max-width: 480px) {
+        width: auto;
+        font-size: 16px;
+        padding-bottom: 50px;
+    }
+}

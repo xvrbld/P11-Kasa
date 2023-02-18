@@ -1,9 +1,9 @@
 import React from "react";
 import { ReactComponent as Logo } from "assets/logo.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
-function Header() {
+/*function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -16,6 +16,20 @@ function Header() {
         <div className={styles.about}>
           <Link to={"/about"}> A Propos </Link>
         </div>
+      </div>
+    </div>
+  );
+}*/
+
+function Header() {
+  return (
+    <div className={styles.header}>
+      <div className={styles.logo}>
+        <Logo fill="var(--primary)" />
+      </div>
+      <div className={styles.nav}>
+          <NavLink className={styles.link} to={"/"}> Accueil </NavLink>
+          <NavLink className={styles.link} to={"/about"}> A Propos </NavLink>
       </div>
     </div>
   );

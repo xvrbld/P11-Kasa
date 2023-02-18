@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./Banner.module.scss";
-import Image from "assets/banner.jpg";
 
-function Banner() {
+function Banner({ img }) {
   return (
     <div className={styles.banner}>
-      <img src={Image} alt="banner"></img>
+      <img src={img} alt="banner"></img>
       <div className={styles.caption}>Chez vous, partout et ailleurs</div>
     </div>
   );

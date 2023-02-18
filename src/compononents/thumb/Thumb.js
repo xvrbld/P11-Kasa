@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Thumb.module.scss";
 
-function Thumb() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/data/kasa.json")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, []);
-
+function Thumb({ logement }) {
   return (
-    <div className={styles.gallery}>
-      {data.map((item) => (
-        <div key={item.id} className={styles.card} id={item.id}>
-          <img src={item.cover} alt={item.title} />
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-        </div>
-      ))}
+    <div
+      key={logement.id}
+      className={styles.card}
+      id={logement.id}
+      style={{ backgroundImage: `url(${logement.cover})` }}
+    >
+      <h2 className={styles.title}>{logement.title}</h2>
+      <Link to={`/logement/${logement.id}`}></Link>
     </div>
   );
 }
