@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "compononents/banner/Banner";
+import Banner from "components/banner/Banner";
 import Image from "assets/banner-about.jpg";
-import Collapse from "compononents/collapse/Collapse";
+import Collapse from "components/collapse/Collapse";
 import { aboutContent } from "data/about";
 import styles from "./About.module.scss";
 

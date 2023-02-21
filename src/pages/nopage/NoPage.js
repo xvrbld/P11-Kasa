@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "compononents/nopage/NoPage.module.scss";
+import styles from "components/nopage/NoPage.module.scss";
 import { Link } from "react-router-dom";
 
 function NoPage() {
