@@ -12,8 +12,12 @@ body {
 
 .container {
   max-width: 1440px;
-  margin: auto 20px;
+  margin: auto;
   min-height: calc(100.8vh - 300px);
+
+  @media screen and (max-width: 1475px) {
+    margin: auto 10px;
+  }
 }
 
 .active {

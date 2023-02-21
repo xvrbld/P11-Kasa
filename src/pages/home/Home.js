@@ -8,7 +8,7 @@ import data from "data/kasa.json";
 function Home() {
   return (
     <div>
-      <Banner img={Image} />
+      <Banner img={Image} text="Chez vous, partout et ailleurs" mobileHeight="110px" />
       <div className={styles.gallery}>
         {data.map((item, index) => (
           <Thumb key={index} logement={item} />
