@@ -3,15 +3,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
+    width: 75%;
 
     .title {
         font-size: 288px;
         margin-bottom: 0;
+
+        @media screen and (max-width: 480px) {
+            font-size: 96px;
+        }
     }
 
     .desc {
         font-size: 36px;
         margin-bottom: 50px;
+        text-align: center;
+
+        @media screen and (max-width: 480px) {
+            font-size: 18px;
+        }
     }
 
     a {

@@ -1,0 +1,84 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infoHost {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 480px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+
+        .host {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            .hostName {
+                color: var(--primary);
+                font-size: 18px;
+                width: 30%;
+            }
+
+            .hostPicture {
+                height: 64px;
+                width: 64px;
+                border-radius: 64px;
+            }
+        }
+
+        .rating {
+            display: flex;
+            justify-content: right;
+
+            svg {
+                margin-left: 10px;
+
+                @media screen and (max-width: 480px) {
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.title {
+    color: var(--primary);
+}
+
+.location {
+    color: var(--primary);
+}
+
+.tags {
+    display: flex;
+}
+
+.collapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    flex-wrap: wrap;
+
+    .collapseColumn {
+        width: calc(50% - 38px);
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+}

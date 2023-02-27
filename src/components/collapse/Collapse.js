@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Collapse.module.scss";
 
 function Collapse(props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   function toggleCollapse() {
     setOpen(!open);
@@ -44,7 +44,19 @@ function Collapse(props) {
           </div>
         )}
       </button>
-      {open && <div className={styles.text}>{props.collapseText}</div>}
+      {open && (
+        <div className={styles.text}>
+          {Array.isArray(props.collapseText) ? (
+            <ul>
+              {props.collapseText.map((equipement) => (
+                <li key={equipement}>{equipement}</li>
+              ))}
+            </ul>
+          ) : (
+            <div>{props.collapseText}</div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

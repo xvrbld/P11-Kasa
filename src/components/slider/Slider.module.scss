@@ -1,0 +1,39 @@
+.slider {
+    position: relative;
+
+    .pictures {
+        border-radius: 25px;
+        width: 100%;
+        max-height: 415px;
+        object-fit: cover;
+        margin: 20px auto;
+    }
+
+    .arrowRight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .arrowLeft {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .imageCount {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+}

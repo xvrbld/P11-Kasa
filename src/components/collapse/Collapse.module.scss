@@ -6,7 +6,7 @@
     margin: 20px auto 0 auto;
     padding-left: 15px;
     display: flex;
-    width: calc(75% - 60px);
+    width: 100%;
     height: 40px;
     display: flex;
     align-items: center;
@@ -37,14 +37,21 @@
     color: var(--primary);
     border-radius: 0 0 5px 5px;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     padding-top: 20px;
-    width: calc(75% - 80px);
     font-size: 20px;
+    line-height: 25px;
 
     @media screen and (max-width: 480px) {
         width: auto;
         font-size: 16px;
         padding-bottom: 50px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 142%;
     }
 }
