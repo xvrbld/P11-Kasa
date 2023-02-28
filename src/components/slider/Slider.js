@@ -22,8 +22,6 @@ function Slider({ pictures }) {
     <div className={styles.slider}>
       <div className={styles.arrowRight} onClick={goToPrevImage}>
         <svg
-          width="48"
-          height="80"
           viewBox="0 0 48 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +35,6 @@ function Slider({ pictures }) {
       <img src={pictures[currentIndex]} alt="slider" className={styles.pictures} />
       <div className={styles.arrowLeft} onClick={goToNextImage}>
         <svg
-          width="48"
-          height="80"
           viewBox="0 0 48 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
