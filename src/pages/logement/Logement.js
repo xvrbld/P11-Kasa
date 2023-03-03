@@ -11,7 +11,7 @@ function Logement() {
   // On récupère l'ID des logements
   const { id } = useParams();
   const item = data.find((l) => l.id === id);
-  
+
   let firstName;
   let lastName;
 

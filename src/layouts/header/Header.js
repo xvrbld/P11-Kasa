@@ -10,8 +10,14 @@ function Header() {
         <Logo fill="var(--primary)" />
       </div>
       <div className={styles.nav}>
-          <NavLink className={styles.link} to={"/"}> Accueil </NavLink>
-          <NavLink className={styles.link} to={"/about"}> A Propos </NavLink>
+        <NavLink className={styles.link} to={"/"}>
+          {" "}
+          Accueil{" "}
+        </NavLink>
+        <NavLink className={styles.link} to={"/about"}>
+          {" "}
+          A Propos{" "}
+        </NavLink>
       </div>
     </div>
   );

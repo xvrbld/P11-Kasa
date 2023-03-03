@@ -10,10 +10,14 @@ function About() {
     <div>
       <Banner img={Image} />
       <div className={styles.collapses}>
-      {aboutContent.map((item, index) => (
-          <Collapse key={index} collapseLabel={item.title} collapseText={item.description} />
+        {aboutContent.map((item, index) => (
+          <Collapse
+            key={index}
+            collapseLabel={item.title}
+            collapseText={item.description}
+          />
         ))}
-        </div>
+      </div>
     </div>
   );
 }
