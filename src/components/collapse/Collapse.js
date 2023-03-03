@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Collapse.module.scss";
 
 function Collapse(props) {
+  // Par défaut, les collapses sont fermés
   const [open, setOpen] = useState(false);
 
   function toggleCollapse() {
@@ -44,6 +45,7 @@ function Collapse(props) {
           </div>
         )}
       </button>
+      {/* Si le text du collapse est un array, on remplit avec les équipments. Sinon avec du texte*/}
       {open && (
         <div className={styles.text}>
           {Array.isArray(props.collapseText) ? (

@@ -8,6 +8,7 @@ import styles from "./Logement.module.scss";
 import NoPage from "pages/nopage/NoPage";
 
 function Logement() {
+  // On récupère l'ID des logements
   const { id } = useParams();
   const item = data.find((l) => l.id === id);
   
@@ -19,8 +20,10 @@ function Logement() {
   let emptyStars;
 
   if (item) {
+    // On sépare le prénom et le nom
     [firstName, lastName] = item.host.name.split(" ");
 
+    // On calcule le nombre d'étoiles pleines et vides pour la note
     filledStars = Math.round(item.rating);
     emptyStars = totalStars - filledStars;
   }

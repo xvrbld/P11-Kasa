@@ -8,6 +8,7 @@ import NoPage from "pages/nopage/NoPage";
 import Logement from "pages/logement/Logement";
 
 function Layout() {
+  // On créé nos routes pour afficher nos pages
   return (
     <div>
       <div className="container">

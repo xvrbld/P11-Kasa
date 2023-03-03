@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Thumb.module.scss";
 
 function Thumb({ logement }) {
+  // On ajoute les data des thumbs
   return (
     <div
       key={logement.id}

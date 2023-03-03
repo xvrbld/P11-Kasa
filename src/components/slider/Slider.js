@@ -2,20 +2,24 @@ import React, { useState } from "react";
 import styles from "./Slider.module.scss";
 
 function Slider({ pictures }) {
+  // On définit l'index 0 pour l'image 1
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // On définit la fonction pour aller à l'image précédente
   const goToPrevImage = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
     );
   };
 
+  // On définit la fonction pour aller à l'image suivante 
   const goToNextImage = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
     );
   };
 
+  // On définit la position actuelle de l'image par l'index sur le nombre total d'images
   const imageCount = `${currentIndex + 1}/${pictures.length}`;
 
   return (
