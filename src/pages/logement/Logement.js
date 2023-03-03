@@ -5,16 +5,27 @@ import Slider from "components/slider/Slider";
 import Tag from "components/tags/Tag";
 import Collapse from "components/collapse/Collapse";
 import styles from "./Logement.module.scss";
+import NoPage from "pages/nopage/NoPage";
 
 function Logement() {
   const { id } = useParams();
   const item = data.find((l) => l.id === id);
+  
+  let firstName;
+  let lastName;
 
   const totalStars = 5;
-  const filledStars = Math.round(item.rating);
-  const emptyStars = totalStars - filledStars;
+  let filledStars;
+  let emptyStars;
 
-  return (
+  if (item) {
+    [firstName, lastName] = item.host.name.split(" ");
+
+    filledStars = Math.round(item.rating);
+    emptyStars = totalStars - filledStars;
+  }
+
+  return item ? (
     <div>
       <Slider pictures={item.pictures} />
       <div className={styles.info}>
@@ -29,7 +40,11 @@ function Logement() {
         </div>
         <div className={styles.infoHost}>
           <div className={styles.host}>
-            <p className={styles.hostName}>{item.host.name}</p>
+            <p className={styles.hostName}>
+              {firstName}
+              <br />
+              {lastName}
+            </p>
             <img
               className={styles.hostPicture}
               src={item.host.picture}
@@ -76,6 +91,8 @@ function Logement() {
         </div>
       </div>
     </div>
+  ) : (
+    <NoPage />
   );
 }
 

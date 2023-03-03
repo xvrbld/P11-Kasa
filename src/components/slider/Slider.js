@@ -16,7 +16,7 @@ function Slider({ pictures }) {
     );
   };
 
-  const imageCount = `${currentIndex + 1}/${pictures.length}`; // Get the current image number and the total number of images
+  const imageCount = `${currentIndex + 1}/${pictures.length}`;
 
   return (
     <div className={styles.slider}>

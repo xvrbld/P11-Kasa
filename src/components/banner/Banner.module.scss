@@ -20,13 +20,16 @@
 
     .caption {
         position: absolute;
-        top: 37%;
+        top: 50%;
+        transform: translateY(-50%);
         color: white;
         font-size: 48px;
 
         @media screen and (max-width: 768px) {
             font-size: 24px;
-            
+            width: 200px;
+            left: 0;
+            margin-left: 16px;
         }
     }
 }
